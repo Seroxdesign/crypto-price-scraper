@@ -29,7 +29,7 @@ const scrapeImages = async () => {
 exports.scraper = functions.https.onRequest((request, response) => {
   cors(request, response, async() => {
 
-    const data = await scrapeImages("seroxdesigns");
+    const data = await scrapeImages();
 
     response.send(data)
   })
